@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Display.dart';
+import 'Calculator.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,11 +12,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Plain Old Calculator"),
         ),
-        body: Column(
-          children: <Widget>[
-            DisplayStatefulWidget(),
-          ],
-        ),
+        body: Center(
+          child: Calculator(),
+        )
         ),
       );
   }

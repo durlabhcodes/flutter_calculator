@@ -6,10 +6,18 @@ class DisplayStatefulWidget extends StatefulWidget {
 }
 
 class _Display extends State<DisplayStatefulWidget>{
-  int output = 0;
+  var outputController;
+  int output;
+  @override
+  void initState() {
+    super.initState();
+    outputController = TextEditingController(text: "0");
+    output = 0;
+  }
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: outputController,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
         enabled: false,

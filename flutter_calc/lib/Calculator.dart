@@ -5,7 +5,7 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
-  String _output, operand;
+  String _output = "", operand = "";
   int num1 = 0, num2 = 0;
 
   initState() {
@@ -47,8 +47,7 @@ class _CalculatorState extends State<Calculator> {
 
   Widget calcButton(String value) {
     return Expanded(
-      child: OutlineButton(
-        padding: EdgeInsets.all(24.0),
+      child: OutlinedButton(
         child: Text(value),
         onPressed: () {
           buttonPressHandler(value);

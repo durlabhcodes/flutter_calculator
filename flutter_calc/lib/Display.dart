@@ -7,7 +7,7 @@ class DisplayStatefulWidget extends StatefulWidget {
 
 class _Display extends State<DisplayStatefulWidget>{
   var outputController;
-  int output;
+  int? output;
   @override
   void initState() {
     super.initState();
